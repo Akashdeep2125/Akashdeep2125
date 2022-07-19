@@ -1,0 +1,85 @@
+//Encapsulation where the customer details is secured with private class so that no other method can access
+
+class Bank12{
+
+	String name;
+	Bank12(String name){
+
+		this.name=name;
+
+	}
+
+	public String getName() {
+
+		return this.name;
+
+	}
+
+}
+
+class Customer{
+
+	private String name;
+
+	private long Account;
+
+	private String Address;
+
+	Customer(String name,long Account,String Address) {
+
+		this.name=name;
+
+		this.Account=Account;
+
+		this.Address=Address;
+
+	}
+
+public String getDetails1() {
+
+	return this.name;
+
+}
+
+public long getDetails2() {
+
+	return this.Account;
+
+}
+
+public String getDetails3() {
+
+	return this.Address;
+
+}
+
+public void setDetails3(String Address) {
+
+	this.Address=Address;
+}
+
+}
+
+public class Bankcustomer {
+
+	public static void main(String[] args) {
+
+		Bank12 bank = new Bank12("SBI");
+
+		Customer customer = new Customer("ABC",603828738,"Bemlnagar");
+
+		System.out.println("Bank name: "+bank.getName());
+
+		System.out.println("Customer Name: "+customer.getDetails1());
+
+		System.out.println("Customer Account Number: "+customer.getDetails2());
+
+		System.out.println("Customer Address: "+customer.getDetails3());
+
+		customer.setDetails3("Kolar");
+
+		System.out.println("Customer updated Address: "+customer.getDetails3());
+
+	}
+
+}
