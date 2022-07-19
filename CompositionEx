@@ -1,0 +1,45 @@
+//Simple Composition example
+class Vehicle{
+
+	String part;
+	public void getData(String name) {
+
+		part = name;
+
+		System.out.println("Car has a "+part);
+
+	}
+
+}
+
+class Part{
+
+	public String getPartname()
+
+	{
+
+		return "Engine";
+
+	}
+
+}
+
+
+
+public class Simplecomposition {
+
+
+
+	public static void main(String[] args) {
+
+	Vehicle v = new Vehicle();
+
+	Part p = new Part();
+
+	v.getData(p.getPartname());
+
+	}
+
+
+
+}
