@@ -1,7 +1,7 @@
 class Heart{
 
 	public void beats()
-package com.oopshiding;	{
+	{
 
 		System.out.println("Every Human has heart");
 
