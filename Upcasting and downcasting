@@ -1,0 +1,100 @@
+class Vehicle11{
+
+	public void wheel() {
+		System.out.println("Vehicles have wheels");
+
+	}
+
+	public void accelerate() {
+
+		System.out.println("Vehicles accelate to move");
+
+	}
+
+	public void brake() {
+
+		System.out.println("Vehicles apply brake to stop");
+
+	}
+
+}
+
+class Twowheeler extends Vehicle11{
+
+	public void wheel() {
+
+		System.out.println("bikes and cycles have two wheels");
+
+	}
+
+	public void accelerate() {
+
+		System.out.println("bike has handle to accelate and move");
+
+	}
+
+	public void brake() {
+
+		System.out.println("bike has lever to brake");
+
+	}
+
+	public void clutch() {
+
+		System.out.println("bike has clutch to change gear");
+
+	}
+
+}
+
+class Fourwheelers extends Vehicle11{
+
+	public void wheel() {
+
+		System.out.println("car have four wheels");
+
+	}
+
+	public void accelerate() {
+
+		System.out.println("car has accelerator pedal to accelate and move");
+
+	}
+
+	public void gear() {
+
+		System.out.println("Car has gear lever to change the internal strokes of engine");
+
+	}
+
+	public void clutch() {
+
+		System.out.println("car has clutch pedal to change gear");
+	}
+}
+public class UpDownCasting {
+	public static void main(String[] args) {
+
+//		Vehicle11 vehicle = new Twowheeler();//upcasting to parent class by creating child class obj
+
+//		vehicle.wheel();
+
+//		vehicle.accelerate();
+
+//		vehicle.brake();
+
+//		Twowheeler twowheeler = (Twowheeler) vehicle;//downcasting parent ref to child class
+
+//		twowheeler.clutch();
+
+		Vehicle11 vehicle1 = new Fourwheelers();
+
+		vehicle1.accelerate();
+
+		vehicle1.brake();
+
+		Fourwheelers fourwheeler = (Fourwheelers) vehicle1;
+
+		fourwheeler.gear();
+	}
+}
