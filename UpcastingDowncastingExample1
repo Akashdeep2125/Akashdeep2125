@@ -1,0 +1,89 @@
+ class Animal{
+
+	 public void sound() {
+		 System.out.println("Animal makes sound");
+
+	 }
+
+	 public void drink() {
+
+		 System.out.println("Animal needs water to drink");
+
+	 }
+
+ }
+
+ class lion extends Animal{
+
+	 @Override
+
+	 public void sound() {
+
+		 System.out.println("lion roars");
+
+	 }
+
+	 public void family() {
+
+		 System.out.println("It is carnivorous animal");
+
+	 }
+
+ }	
+
+ class dog extends Animal{
+
+	 @Override
+
+	 public void sound() {
+
+		 System.out.println("dog barks");
+
+	 }
+
+	 public void family() {
+
+		 System.out.println("It is Fidelity animal"); //specific method
+
+	 }
+
+ }
+
+public class Demo1 {
+
+
+
+	public static void main(String[] args) {
+
+		Animal animal;
+
+		
+
+		animal = new lion(); //upcasting 
+
+		animal.drink();
+
+		animal.sound();
+
+
+
+lion l = (lion) animal;
+
+		l.family();  
+
+		animal  = new dog();
+
+		animal.drink();
+
+		animal.sound();
+
+//		
+
+//		//dog d = (dog) animal;
+
+//		d.family();
+
+		((dog)animal).family(); //downcasting
+
+	}
+}
